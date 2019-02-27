@@ -103,3 +103,6 @@ function getSemiRandomColor() {
 }
 
 root.style.setProperty('--main-color', getSemiRandomColor())
+function changeColor() {
+  root.style.setProperty('--main-color', getSemiRandomColor())
+}
