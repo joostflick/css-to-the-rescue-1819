@@ -8,10 +8,31 @@
   </head>
   <body>
     <a href="#link1">
-      <div class="lightButton" onclick="lightSwitch()"></div>
+      <div class="switchButton" onclick="Switch()">
+        <object type="image/svg+xml" data="light.svg" class="logo">
+          Light/position logo
+          <!-- fallback image in CSS -->
+        </object>
+      </div>
     </a>
-    <div class="content">
-      <div class="content__article--big">
+    <a href="#link2">
+      <div class="positionButton" onclick="positionSwitch()">
+        <object type="image/svg+xml" data="position.svg" class="logo">
+          Position logo
+          <!-- fallback image in CSS -->
+        </object>
+      </div>
+    </a>
+    <a href="#link3">
+      <div class="lightButton" onclick="lightSwitch()">
+        <object type="image/svg+xml" data="light-bulb.svg" class="logo">
+          Light bulb logo
+          <!-- fallback image in CSS -->
+        </object>
+      </div>
+    </a>
+    <div class="content busy light">
+      <div class="content__article--big busy light">
         <h1 class="article__h1">Artikelen in light en dark mode</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -23,7 +44,7 @@
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <div class="content__article--small">
+      <div class="content__article--small busy light">
         <h1 class="article__h1">Artikel 2</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,7 +53,7 @@
           aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div class="content__article--small">
+      <div class="content__article--small busy light">
         <h1 class="article__h1">Artikel 3</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -42,7 +63,7 @@
           laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div class="content__article--small">
+      <div class="content__article--small busy light">
         <h1 class="article__h1">Artikel 4</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -51,7 +72,7 @@
           aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div class="content__article--small">
+      <div class="content__article--small busy light">
         <h1 class="article__h1">Artikel 5</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -62,14 +83,14 @@
           labore et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
       </div>
-      <div class="content__article--small">
+      <div class="content__article--small busy light">
         <h1 class="article__h1">Artikel 6</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div>
-      <div class="content__article--small">
+      <div class="content__article--small busy light">
         <h1 class="article__h1">Artikel 1</h1>
         <p class="article__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

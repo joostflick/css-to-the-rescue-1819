@@ -3,41 +3,61 @@ var content = document.getElementsByClassName('content')[0]
 var articleSmall1 = document.querySelectorAll('.content__article--small')
 var articleBig = document.querySelectorAll('.content__article--big')
 
-function lightSwitch() {
-  console.log(articleSmall1)
-  if (content.className == 'content') {
-    body.className = 'body darkmode'
-    content.className = 'content darkmode'
-    content.style = 'transform: rotate(0deg);'
-    articleBig[0].style = 'transform: rotate(0deg);'
-    articleSmall1[0].style =
-      'grid-column-start: 2; background-color: black; transform: rotate(0deg);'
-    articleSmall1[1].style =
-      'grid-column-start: 2; background-color: black; transform: rotate(0deg);'
-    articleSmall1[2].style =
-      'grid-column-start: 2; background-color: black; transform: rotate(0deg);'
-    articleSmall1[3].style =
-      'grid-column-start: 2; background-color: black; transform: rotate(0deg);'
-    articleSmall1[4].style =
-      'grid-column-start: 2; background-color: black; transform: rotate(0deg);'
-    articleSmall1[5].style =
-      'grid-column-start: 2; background-color: black; transform: rotate(0deg);'
+function Switch() {
+  positionSwitch()
+  lightSwitch()
+}
+
+function positionSwitch() {
+  if (content.className.includes('busy')) {
+    content.classList.add('calm')
+    content.classList.remove('busy')
+    articleSmall1.forEach(function(article) {
+      article.classList.add('calm')
+      article.classList.remove('busy')
+    })
+    articleBig.forEach(function(article) {
+      article.classList.add('calm')
+      article.classList.remove('busy')
+    })
   } else {
-    body.className = 'body'
-    content.className = 'content'
-    content.style = 'transform: rotate(2deg);'
-    articleBig[0].style = ''
-    articleSmall1[0].style = ''
-    articleSmall1[1].style = ''
-    articleSmall1[2].style = ''
-    articleSmall1[3].style = ''
-    articleSmall1[4].style = ''
-    articleSmall1[5].style = ''
-    articleSmall1[0].class = ''
-    articleSmall1[1].class = ''
-    articleSmall1[2].class = ''
-    articleSmall1[3].class = ''
-    articleSmall1[4].class = ''
-    articleSmall1[5].class = ''
+    content.classList.add('busy')
+    content.classList.remove('calm')
+    articleSmall1.forEach(function(article) {
+      article.classList.add('busy')
+      article.classList.remove('calm')
+    })
+    articleBig.forEach(function(article) {
+      article.classList.add('busy')
+      article.classList.remove('calm')
+    })
+  }
+}
+
+function lightSwitch() {
+  if (content.className.includes('dark')) {
+    content.classList.add('light')
+    content.classList.remove('dark')
+    body.classList.remove('dark')
+    articleSmall1.forEach(function(article) {
+      article.classList.add('light')
+      article.classList.remove('dark')
+    })
+    articleBig.forEach(function(article) {
+      article.classList.add('light')
+      article.classList.remove('dark')
+    })
+  } else {
+    content.classList.add('dark')
+    content.classList.remove('light')
+    body.classList.add('dark')
+    articleSmall1.forEach(function(article) {
+      article.classList.add('dark')
+      article.classList.remove('light')
+    })
+    articleBig.forEach(function(article) {
+      article.classList.add('dark')
+      article.classList.remove('light')
+    })
   }
 }
